@@ -34,7 +34,7 @@ steps:
       - |
         echo 'int main(){}' > dummy.c
 
-        gcc dummy.c
+        LIBRARY_PATH=/bootstrap/lib gcc dummy.c
         readelf -l a.out | tee | grep ": {{ .TOOLCHAIN }}"
 finalize:
   - from: "{{ .BOOTSTRAP }}"

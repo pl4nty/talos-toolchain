@@ -34,10 +34,10 @@ steps:
         mkdir build
         cd build
 
-        for file in ../gcc/config/{aarch64/aarch64-linux,arm/{linux-eabi,linux-elf},linux,i386/linux{,64}}.h; do
+        for file in ../gcc/config/{aarch64/aarch64-linux,arm/{linux-eabi,linux-elf},linux,i386/linux{,64},riscv/linux}.h; do
             cp -uv $file{,.orig}
             sed -e "s@/lib\(64\)\?\(32\)\?/ld@{{ .TOOLCHAIN }}&@g" \
-            -e "s@/usr@${{ .TOOLCHAIN }}@g" $file.orig > $file
+            -e "s@/usr@{{ .TOOLCHAIN }}@g" $file.orig > $file
             cat >> $file <<EOF
         #undef STANDARD_STARTFILE_PREFIX_1
         #undef STANDARD_STARTFILE_PREFIX_2

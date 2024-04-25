@@ -41,7 +41,7 @@ steps:
 
         cat ../gcc/limitx.h ../gcc/glimits.h ../gcc/limity.h > `dirname $(gcc -print-libgcc-file-name)`/include-fixed/limits.h
 
-        for file in ../gcc/config/{aarch64/aarch64-linux,arm/{linux-eabi,linux-elf},linux,i386/linux{,64}}.h; do
+        for file in ../gcc/config/{aarch64/aarch64-linux,arm/{linux-eabi,linux-elf},linux,i386/linux{,64},riscv/linux}.h; do
             cp -uv $file{,.orig}
             sed -e "s@/lib\(64\)\?\(32\)\?/ld@${TOOLCHAIN}&@g" \
             -e "s@/usr@${TOOLCHAIN}@g" $file.orig > $file

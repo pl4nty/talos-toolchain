@@ -1,9 +1,10 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.3.0
+# syntax = ghcr.io/pl4nty/bldr
 
 format: v1alpha2
 
 vars:
   BOOTSTRAP: /bootstrap
+  TOOLCHAIN: /toolchain
 
   # renovate: datasource=git-tags extractVersion=^binutils-(?<version>.*)$ depName=git://sourceware.org/git/binutils-gdb.git
   binutils_version: 2_42

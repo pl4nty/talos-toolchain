@@ -11,6 +11,7 @@ steps:
         sha512: "{{ .gcc_sha512 }}"
     env:
       PATH: "{{ .BOOTSTRAP }}/bin:{{ .PATH }}"
+      LIBRARY_PATH: /bootstrap/lib
     prepare:
       - |
         tar -xJf gcc.tar.xz --strip-components=1
