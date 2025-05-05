@@ -1,4 +1,4 @@
-# syntax = ghcr.io/siderolabs/bldr:v0.5.6
+# syntax = ghcr.io/pl4nty/bldr:f1dc7d2
 
 format: v1alpha2
 
@@ -50,20 +50,20 @@ vars:
   musl_sha512: 7bb7f7833923cd69c7a1a9b8a5f1784bfd5289663eb6061dcd43d583e45987df8a68a1be05d75cc1c88a3f5b610653d1a70f4a9cff4d8f7fd41ae73ee058c17c
 
   # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
-  stagex_prefix: ghcr.io/siderolabs/stagex
-  stagex_binutils_sha256: b4c8c1b077ed483885db0d7d29c9a6efa574cda71629970f0c753f51ef0046ee
+  stagex_prefix: ghcr.io/pl4nty/stagex
+  stagex_binutils_sha256: ed1c7b09c489ceee89a38fcbd1749412dac52a75c39a65ec9bde9a959d41fa29
   stagex_binutils_version: 2.43.1
-  stagex_busybox_sha256: c0b551b47d8f1ac2fd5f4712eafddb8717e6e563a47203e02f94f944f64c18b2
+  stagex_busybox_sha256: 553659c54726133733c9df7e4cacaa98c10b38d799d71f35f4eba5de0e87e5de
   stagex_busybox_version: 1.36.1
-  stagex_diffutils_sha256: 697119e6231be9c3e3dcd5c6f04cb8bfdf9178a86ce03433d0f442793b6ac43d
+  stagex_diffutils_sha256: 1ebc84e5fca0cc693c112e15e2315a8b10e641d8645ace09035ea71fb2fdd1ed
   stagex_diffutils_version: 3.10
-  stagex_gcc_sha256: e56482e2e72b892a2c7faa9ef6ba2b37506695990aa139aa8fa8c1b2e90e5117
+  stagex_gcc_sha256: 54c686ad9d7e074e657a76643ef347607dc8e07e8565b4a033a3ad36329c60ad
   stagex_gcc_version: 13.1.0
-  stagex_go_sha256: 0669b11ba9eb54d4d24e2465e06b0955c0d4fb3d7a6362d31e71036e81964989
+  stagex_go_sha256: 5a7b946149fe0bd578dc37684121237af0c7e5e8f87cc00332992e01c7b35f44
   stagex_go_version: 1.24.4
-  stagex_make_sha256: e36f3612c4788a3ff17312a3480228ae7b8edb2cdcba577fe3cc3db1ed5a4ee8
+  stagex_make_sha256: 32b1fb5facfa53e069f9acc3c8e5509ed8e48e667d697934f2a29904cdc518ea
   stagex_make_version: 4.4
-  stagex_musl_sha256: ac9d3d3082d93a4ff1f2624dc149d8372dbcbb919fc163a1d61bb79a938cd205
+  stagex_musl_sha256: cd86b20ed87725a13430c4b286b0e6c56529e8ac3af4a1a547d0ed1ac2fc4014
   stagex_musl_version: 1.2.5
 
 labels:
