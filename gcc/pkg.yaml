@@ -73,8 +73,10 @@ steps:
         cd build
         make DESTDIR=/rootfs install-strip
         ln -sv gcc /rootfs/usr/bin/cc
-        mv /rootfs/usr/lib64/* /rootfs/usr/lib/
-        rm -rf /rootfs/usr/lib64
+        if [ -d "/rootfs/usr/lib64" ]; then
+          mv /rootfs/usr/lib64/* /rootfs/usr/lib/
+          rm -rf /rootfs/usr/lib64
+        fi
 finalize:
   - from: /rootfs
     to: /
