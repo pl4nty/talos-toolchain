@@ -25,6 +25,9 @@ steps:
             armv7)
                 arch="arm"
             ;;
+            riscv64)
+                arch="riscv"
+            ;;
             *)
                 echo "unsupported arch ${ARCH}"
                 exit 1
