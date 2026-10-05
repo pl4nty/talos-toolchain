@@ -50,7 +50,8 @@ vars:
 
   # Stage(x) reproducibly built bootstrap toolchain. Please update when necessary to build newer toolchain
   stagex_prefix: ghcr.io/pl4nty/stagex
-  stagex_version: staging
+  stagex_version: 2026.09.0
+  # TODO: refresh the stagex_*_sha256 digests below from the pl4nty/talos-stagex 2026.09.0 build
   stagex_binutils_sha256: 10fe4dfd3c677f9df5542ebe31ada3bd6fd5383e1da37500a51b701217c1fc86
   stagex_bison_sha256: 47fed213658d870c284e3426c60cdbc6ed64ca7618e37640a8776a02f63c7e1b
   stagex_busybox_sha256: 37c994b39a72e045736d9c497684707199427f667493facc68f9d42006f96d26
